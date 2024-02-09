@@ -17,7 +17,15 @@ let Obj =
 // }
 
 // for-of loop - we use in array mostly
-for(let i of "Shubham")
+// for(let i of "Shubham")
+// {
+//     console.log(i);
+// }
+for(const i of Object.keys(Obj))
 {
+    // console.log(keys, value);
     console.log(i);
 }
+
+console.log("Shubham" in Obj ? "Present" : "Absent");
+console.log("Sundeep" in Obj ? "Present" : "Absent");

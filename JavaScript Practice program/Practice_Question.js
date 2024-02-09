@@ -58,19 +58,32 @@
 //     }
 // }
 
-const Mean = (a, b, c, d, e)=>
-{
-    // let Ans = 0;
-    // for(let i = 0; i < 5; i++)
-    // {
-    //     let Temp = prompt("Enter the " + (i + 1) + "th number");
-    //     Ans = Ans + Temp;
-    // }
-    // Ans = (Ans / 5);
+// const Mean = (a, b, c, d, e)=>
+// {
+//     let Ans = 0;
+//     for(let i = 0; i < 5; i++)
+//     {
+//         let Temp = prompt("Enter the " + (i + 1) + "th number");
+//         Ans = Ans + Temp;
+//     }
+//     Ans = (Ans / 5);
 
-    // return Ans;
+//     return Ans;
 
-    return Math.round((a + b + c + d + e) / 5);
-}
+//     return Math.round((a + b + c + d + e) / 5);
+// }
 
-console.log("Mean of 5 number are  = ", Mean(1, 2, 3, 4, 5));
+// console.log("Mean of 5 number are  = ", Mean(1, 2, 3, 4, 5));
+
+// console.log("Shubham\"".length);
+
+// let Str = "Shubham";
+// console.log(Str.toLowerCase());
+// console.log(Str.toUpperCase());
+
+// Str = "Please give me 1000";
+// console.log(parseInt(Str.slice("Please give me ".length)));
+
+// // Not change in original string and also not giving any error for changing immutable string.
+// Str[5] = "O";
+// console.log(Str);
