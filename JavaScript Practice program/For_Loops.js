@@ -21,11 +21,16 @@ let Obj =
 // {
 //     console.log(i);
 // }
-for(const i of Object.keys(Obj))
-{
-    // console.log(keys, value);
-    console.log(i);
-}
+// for(const i of Object.keys(Obj))
+// {
+//     // console.log(keys, value);
+//     console.log(i);
+// }
 
-console.log("Shubham" in Obj ? "Present" : "Absent");
-console.log("Sundeep" in Obj ? "Present" : "Absent");
+// console.log("Shubham" in Obj ? "Present" : "Absent");
+// console.log("Sundeep" in Obj ? "Present" : "Absent");
+
+let Arr = [1, 2, 4, 2, 5, 2, 6, 3];
+
+// Arr.forEach(i => console.log(i));
+console.log(Arr.join(","));

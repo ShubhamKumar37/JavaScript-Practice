@@ -1,1 +1,5 @@
-Arr_Obj
+
+{
+    Arr.pop();
+}
+console.log(Arr);
