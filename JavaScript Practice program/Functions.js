@@ -22,7 +22,27 @@
 
 // A(10);
 
-let Arr = [1, 3, 4, -1, -4, 12];
-let Filter = Arr.filter(i => i > 0);
+// let Arr = [1, 3, 4, -1, -4, 12];
+// let Filter = Arr.filter(i => i > 0);
 
-console.log(Filter);
+// console.log(Filter);
+
+// function Sum()
+// {
+//     let Total = 0;
+//     for(let i of arguments)
+//     {
+//         Total += i;
+//     }
+    
+//     return Total;
+// }
+
+// we cann't add more parameter after using rest operator as it will result to error
+
+function Sum(a, ...args)
+{
+    console.log(a, ...args);
+}
+
+console.log(Sum([1, 3, 4, 2, 5, 6, 3, 3]));

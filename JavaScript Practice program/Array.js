@@ -63,3 +63,15 @@ console.log(Arr);
 //     Arr.pop();
 // }
 // console.log(Arr);
+
+let Obj = [
+    {Value:3},
+    {Value:8},
+    {Value:1},
+    {Value:5},
+];
+
+console.log(Obj);
+
+Obj.sort((Value1, Value2) => Value1.Value - Value2.Value);
+console.log(Obj);
