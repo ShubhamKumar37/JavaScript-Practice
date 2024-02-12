@@ -40,9 +40,16 @@
 
 // we cann't add more parameter after using rest operator as it will result to error
 
-function Sum(a, ...args)
+// function Sum(a, ...args)
+// {
+//     console.log(a, ...args);
+// }
+
+// console.log(Sum([1, 3, 4, 2, 5, 6, 3, 3]));
+
+function Percentage(A, B = 123, C)
 {
-    console.log(a, ...args);
+    return (A + B + C) / 100;
 }
 
-console.log(Sum([1, 3, 4, 2, 5, 6, 3, 3]));
+console.log(Percentage(10, undefined, 34));
