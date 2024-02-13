@@ -15,4 +15,5 @@ let Obj =
 
 console.log(Obj);
 Obj.Name = 'Nikhil Suryavanshi';
+Obj.Name = 'Sparsh Sharma';
 console.log(Obj);

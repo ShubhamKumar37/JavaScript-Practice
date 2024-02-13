@@ -47,7 +47,7 @@
 
 // console.log(Sum([1, 3, 4, 2, 5, 6, 3, 3]));
 
-function Percentage(A, B = 123, C)
+function Percentage(A, B = 123, C = 10)
 {
     return (A + B + C) / 100;
 }
