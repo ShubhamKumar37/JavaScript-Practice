@@ -11,12 +11,12 @@
 
 <body>
     <!-- #Wrapper -->
-    <div class="relative  bg-black ">
-        <div class="absolute h-[10rem] w-[10rem] bg-orange-700 rounded-full top-[10%] left-[0%] shadow-lg shadow-orange-600"></div>
-        <div></div>
+    <div class="relative  bg-black overflow-none text-white">
+        <div class="absolute h-[10rem] w-[10rem] bg-orange-700 rounded-full top-[10%] left-[17%] Circle1_Shadow "></div>
+        <div class="absolute h-[15rem] w-[15rem] bg-[#6845E2] rounded-full bottom-[13%] right-[20%] Circle2_Shadow "></div>
         
-        <div class="relative h-[100vh] w-[100vw] flex flex-row justify-center items-center">
-            <div class="relative min-h-[30rem] w-[25rem] flex flex-col text-white border-2 rounded-xl border-[#ffffff30] p-9 py-14 justify-between bg-[#ffffff1a] backdrop-blur-sm items-center">
+        <div class="relative  flex flex-row justify-center items-center h-[100vh] w-[100vw]">
+            <div class="relative min-h-[30rem] w-[25rem] flex flex-col border-2 rounded-xl border-[#ffffff30] p-9 py-14 justify-between bg-[#ffffff1a] backdrop-blur-sm items-center">
                 <div>
                     <img src="./Images/Profile_GFG.jpg" class="h-[8rem] w-[8rem] object-cover bg-center rounded-full border-2 border-[#ffffff30]">
                 </div>
@@ -30,7 +30,7 @@
                 </h3>
                 
                 <div class="relative grid grid-cols-2 gap-3">
-                    <button class="border-2 border-[#ffffffb8] p-3 py-2 text-sm rounded-md hover:bg-[#9e9d9d] hover:text-[#000000] transition-all duration-100">
+                    <button onclick="Open_Share()" class="border-2 border-[#ffffffb8] p-3 py-2 text-sm rounded-md hover:bg-[#9e9d9d] hover:text-[#000000] transition-all duration-100">
                         <i class="fa-solid fa-share-nodes"></i>
                         Share My Profile
     
@@ -41,7 +41,33 @@
                     </button>
                 </div>
             </div>
+            <div id="Share_Section" class="absolute flex flex-row  justify-center items-center scale-0 transition-all duration-100">
+                <div class="flex flex-col relative border-2 rounded-lg border-[#ffffff30] p-4 min-w-[35rem] gap-[1rem]">
+                    <div class="flex flex-row justify-between border-b pb-3">
+                        <h1 class="text-4xl ">Share My Profile</h1>
+                        <button>
+                            <i class="fa-regular fa-circle-xmark text-3xl"></i>
+                        </button>
+                    </div>
+                    <!-- <hr class="my-3"> -->
+                    <h1 class="text-xl">Share this via</h1>
+    
+                    <div class="flex flex-col relative ">
+                        <div>
+                            <ul class="flex flex-row justify-between">
+                                <li class="text-7xl cursor-pointer hover:text-blue-700 transition-all duration-150"><i class="fa-brands fa-facebook"></i></li>
+                                <li class="text-7xl cursor-pointer hover:text-green-700 transition-all duration-150"><i class="fa-brands fa-whatsapp"></i></li>
+                                <li class="text-7xl cursor-pointer hover:text-pink-500 transition-all duration-150"><i class="fa-brands fa-instagram"></i></li>
+                                <li class="text-7xl cursor-pointer hover:text-blue-500 transition-all duration-150"><i class="fa-brands fa-twitter"></i></li>
+                                <li class="text-7xl cursor-pointer  hover:text-blue-600 transition-all duration-150"><i class="fa-brands fa-telegram"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="absolute bg-[#5f5f5f83] h-[100vh] w-[100vw] scale-0 Bg_Overlay" onclick="Close_Share()"></div>
     </div>
     
 

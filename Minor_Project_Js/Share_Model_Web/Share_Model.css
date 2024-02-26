@@ -1,0 +1,31 @@
+.Circle1_Shadow
+{
+    box-shadow: 0 0 40px orangered;
+    animation: Left_Right_Circle1 25s infinite linear;
+}
+
+.Circle2_Shadow
+{
+    box-shadow: 0 0 40px rgb(171, 123, 255);
+    animation: Left_Right_Circle2 20s infinite linear;
+}
+
+@keyframes Left_Right_Circle1 {
+    50%
+    {
+        left: 40%;
+    }
+}
+@keyframes Left_Right_Circle2 {
+    50%
+    {
+        right: 40%;
+    }
+}
+
+.Active
+{
+    visibility: visible;
+    scale: 1;
+    z-index: 20;
+}
