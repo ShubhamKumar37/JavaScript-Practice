@@ -7,14 +7,14 @@
     background-color: #000;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   }
-  
+ 
   .wrapper {
     width: 100vw;
     height: 100vh;
   }
   
   .circle1 {
-    position: fixed;
+    position: absolute;
     top: 5%;
     left: 30%;
     width: 13em;
@@ -50,6 +50,7 @@
       right: 31%;
     }
   }
+  
   .card-wrapper {
     position: absolute;
     top: 50%;
@@ -114,6 +115,7 @@
     background: #ffffffb9;
     color: #131313;
   }
+  
   
   .modal {
     position: fixed;
@@ -235,6 +237,7 @@
     opacity: 1;
     pointer-events: initial;
   }
+   /*
   @media (max-width: 850px) {
     .card-wrapper {
       max-width: 250px;
@@ -273,3 +276,5 @@
       width: 80vw;
     }
   }
+
+*/
