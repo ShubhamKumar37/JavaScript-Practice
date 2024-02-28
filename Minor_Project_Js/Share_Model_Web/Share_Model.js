@@ -1,5 +1,5 @@
-const Share_Button = document.querySelector('#Share_Section');
-const Bg_Tint = document.querySelector('.Bg_Overlay');
+const Share_Button = document.querySelector('.Share_Model_Section');
+const Bg_Tint = document.querySelector('.Faded_Tint');
 
 function Open_Share()
 {

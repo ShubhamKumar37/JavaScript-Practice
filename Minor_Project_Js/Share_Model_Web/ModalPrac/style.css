@@ -237,7 +237,7 @@
     opacity: 1;
     pointer-events: initial;
   }
-   /*
+  
   @media (max-width: 850px) {
     .card-wrapper {
       max-width: 250px;
@@ -276,5 +276,3 @@
       width: 80vw;
     }
   }
-
-*/

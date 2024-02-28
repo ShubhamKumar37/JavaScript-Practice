@@ -16,7 +16,7 @@
         <div class="Circle2"></div>
 
         
-        <div class="Main_Card_Front ">
+        <div class="Main_Card_Front z-10">
             <!-- image -->
             <div class="Profile_Img_Align ">
                 <img src="./Images/Profile_GFG.jpg" class="Profile_Img">
@@ -31,13 +31,42 @@
             <!-- Buttons -->
             <div class="Button_Section">
                 <!-- Share button -->
-                <button class="Share_Button"><i class="fa-solid fa-share-nodes mr-1"></i>Share My Profile</button>
+                <button onclick="Open_Share()" class="Share_Button hover:bg-white hover:text-black"><i class="fa-solid fa-share-nodes mr-1"></i>Share My Profile</button>
                 
                 
                 <!-- Follow me -->
                 <button class="Follow_Me_Button">Follow Me</button>
             </div>
         </div> 
+
+        <div class="Share_Model_Section absolute flex flex-col justify-between border-2 border-[#b1b0b0] p-7 px-5 rounded-xl z-30">
+            <div class="relative flex flex-row gap-[12rem] border-b-2 pb-3">
+                <h2 class="text-3xl font-bold">Share My Profile</h2>
+                <i onclick="Close_Share()" class="fa-solid fa-xmark close text-4xl cursor-pointer"></i>
+            </div>
+            <div class="relative flex flex-col mt-4 gap-5">
+                <h2 class="text-2xl">Share this via</h2>
+                
+                <div class=" flex flex-row justify-between">
+                    <a href="#" class="icon text-5xl w-[5rem] h-[5rem] flex justify-center items-center rounded-full border border-[#1f78fd] hover:bg-[#1f78fd] group" id="facebook">
+                        <i class="fa-brands group-hover:text-white fa-facebook-f text-[#2C70BD]"></i>
+                      </a>
+                      <a href="#" class="icon text-5xl w-[5rem] h-[5rem] flex justify-center items-center rounded-full border border-[#3b90ff] hover:bg-[#3b90ff] group" id="twitter">
+                        <i class="fa-brands fa-twitter group-hover:text-white text-[#1D9BF0]"></i>
+                      </a>
+                      <a href="#" class="icon text-5xl w-[5rem] h-[5rem] flex justify-center items-center rounded-full border border-[#d11dbf] hover:bg-[#d11dbf] group" id="instagram">
+                        <i class="fa-brands fa-instagram group-hover:text-white text-pink-700"></i>
+                      </a>
+                      <a href="#" class="icon text-5xl w-[5rem] h-[5rem] flex justify-center items-center rounded-full border border-[#1fa33c] hover:bg-[#1fa33c] group" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp group-hover:text-white text-green-600 "></i>
+                      </a>
+                      <a href="#" class="icon text-5xl w-[5rem] h-[5rem] flex justify-center items-center rounded-full border border-[#23a6ec] hover:bg-[#23a6ec] group" id="telegram">
+                        <i class="fa-brands fa-telegram group-hover:text-white text-[#35ACDF]"></i>
+                      </a>
+                </div>
+            </div>
+        </div>
+        <div onclick="Close_Share()" class="Faded_Tint absolute bg-[#5f5f5f83] left-0 right-0 top-0 bottom-0 z-20"></div>
     </div>
     
 
