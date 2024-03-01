@@ -60,3 +60,73 @@
 // }
 
 // console.log(Check_Int(-234));
+
+// Q7
+// function Number_Table(Num)
+// {
+//     for(let i = 1; i <= 10; i++)
+//     {
+//         console.log(Num * i);
+//     }
+// }
+
+// Number_Table(3);
+
+// Q8
+// function Natural_Sum(Num)
+// {
+    // return (Num * (Num + 1)) / 2;
+    // let Ans = 0;
+    // for(let i = 1; i <= Num; i++)
+    // {
+    //     Ans += i;
+    // }
+
+    // return Ans;
+// }
+
+// console.log(Natural_Sum(10));
+
+// Q9
+// function Count_Vowel(Str)
+// {
+//     let Vowel = ['a', 'e', 'i', 'o', 'u'];
+//     let Ans = 0; 
+//     Str = Str.toLowerCase();
+
+//     for(i of Str)
+//     {
+//         if(Vowel.includes(i))
+//         {
+//             Ans++;
+//         }
+//     }
+
+//     return Ans;
+// }
+
+// console.log(Count_Vowel("Shubham, Sparsh, Harsh, Vansh, Yash"));
+
+// Q10
+// function Delete_Duplicate(Arr1, Arr2)
+// {
+//     let Arr3 = [];
+
+//     for(i of Arr1)
+//     {
+//         if(!Arr2.includes(i))
+//         {
+//             Arr3.push(i);
+//         }
+//     }
+//     for(i of Arr2)
+//     {
+//         if(!Arr1.includes(i))
+//         {
+//             Arr3.push(i);
+//         }
+//     }
+//     return Arr3;
+// }
+
+// console.log(Delete_Duplicate([1, 4, 2, 5, 6], [2, 5, 4, 3, 8, 7, 2]));
