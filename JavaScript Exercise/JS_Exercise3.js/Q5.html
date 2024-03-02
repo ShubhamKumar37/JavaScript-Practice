@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Click to Validate</title>
+    <style>
+        .Invalid
+        {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    <form class="flex flex-col gap-4 w-[15rem] m-4">
+    <p id="Message"></p>
+    <form id="My_Form" class="flex flex-col gap-4 w-[15rem] m-4">
         <label for="Name">Enter the name : </label>
-        <input id="Name" placeholder="Eg. Shubham, Sparsh, Harsh" type="text" class="border-2 border-black rounded-md">
+        <input id="Name" name="Name" placeholder="Eg. Shubham, Sparsh, Harsh" type="text" class="border-2 border-black rounded-md" required>
         <br>
         
         <label for="Number">Enter the mobile number : </label>
-        <input id="Number" placeholder="Eg. xxxxxxxx91" type="tel" class="border-2 border-black rounded-md">
+        <input id="Number" name="Number" placeholder="Eg. xxxxxxxx91" type="tel" class="border-2 border-black rounded-md" >
         <br>
         
         <label for="DOB">Enter the DOB : </label>
-        <input id="DOB" type="date" class="border-2 border-black rounded-md">
+        <input id="DOB" type="date" name="DOB" class="border-2 border-black rounded-md" >
 
-        <button class="border-2 border-black p-2 bg-blue-500 text-white rounded-lg hover:underline" onclick="Check_Input('#Name','#Number', '#DOB')">Submit</button>
-        
+        <button class="border-2 border-black p-2 bg-blue-500 text-white rounded-lg hover:underline">Submit</button>
     </form>
-
     <script src="./Q5.js"></script>
 </body>
 </html>
