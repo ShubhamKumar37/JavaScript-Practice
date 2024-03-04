@@ -5,21 +5,47 @@ let Password_length_Number = document.querySelector('[Password_length_Number]');
 let Password_length_Slider = document.querySelector('[Password_length_Slider]');
 let Uppercase_Val = document.querySelector('#Uppercase');
 let Lowercase_Val = document.querySelector('#Lowercase');
-let Number = document.querySelector('#Number');
-let Symbol = document.querySelector('#Symbol');
+let Number_Val = document.querySelector('#Number');
+let Symbol_Val = document.querySelector('#Symbol');
 let Strength_Indicator = document.querySelector('[Strength_Indicator]');
 let Generate_Password = document.querySelector('[Generate_Password]');
 let All_Check_Box = document.querySelectorAll('input[type=checkbox]');
 
-let Pass_Length = 4;
-Change_Password_Length_Slider();
+let Password = "";
+let Pass_Length = 10;
 
-
-function Change_Password_Length_Slider()
+function Copy_To_Clipboard()
 {
-    Password_length_Number.innerText = Pass_Length;
-    Password_length_Slider.value = Pass_Length;
+    try
+    {
+        navigator.clipboard.writeText(Password_Display.value);
+        Password_Copy_Message.innerText = "Copied!";
+    }
+    catch
+    {
+        Password_Copy_Message.innerText = "Failed";
+    }
+
+    Password_Copy_Message.classList.add('Active');
+    
+    setTimeout(() =>
+    {
+        Password_Copy_Message.classList.remove('Active');
+    }, 2000);
 }
+
+// function Change_Password_Length_Slider()
+// {
+//     Password_length_Number.innerText = Pass_Length;
+//     Password_length_Slider.value = Pass_Length;
+// }
+// Change_Password_Length_Slider();
+
+Password_length_Slider.addEventListener('input', (Event) =>
+{
+    Password_length_Number.innerText = Event.target.value;
+    Pass_Length = Password_length_Slider.value;
+})
 
 function Generate_Random_Number(Min, Max)
 {
@@ -45,4 +71,58 @@ function Generate_Random_Symbols()
 {
     let Symbols = "~`!@#$%^&*()_+-={}|][';:.,<>";
     return Symbols[Generate_Random_Number(0, Symbols.length)];
+}
+
+function Calculate_Password_Strength()
+{
+    let Temp = 0;
+    let Length = Pass_Length;
+    let Green = "bg-[#20EA00]";
+    let Blue = "bg-[#014AFF]";
+    let Red = "bg-[#F40C01]";
+    let Upper = false;
+    let Lower = false;
+    let Int = false;
+    let Symbol = false;
+
+    if(Uppercase_Val.checked) {Upper = true; Temp++;}
+    if(Lowercase_Val.checked) {Lower = true; Temp++;}
+    if(Number_Val.checked) {Int = true; Temp++;}
+    if(Symbol_Val.checked) {Symbol = true; Temp++;}
+
+
+    if(Length <= 7)
+    {
+        if(Upper && Lower && Int && Symbol)
+        {
+            Strength_Indicator.classList.add(Blue);
+        }
+        else if(Temp > 1)
+        {
+            Strength_Indicator.classList.add(Green);
+        }
+        else 
+        {
+            Strength_Indicator.classList.add(Red);
+        }
+    }
+    else if(Length <= 14)
+    {
+        if(Upper && Lower && Int && Symbol)
+        {
+            Strength_Indicator.classList.add(Blue);
+        }
+        else if(Temp > 1)
+        {
+            Strength_Indicator.classList.add(Green);
+        }
+        else 
+        {
+            Strength_Indicator.classList.add(Red);
+        }
+    }
+    else
+    {
+        Strength_Indicator.classList.add(Blue);
+    }
 }
