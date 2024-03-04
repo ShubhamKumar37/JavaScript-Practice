@@ -13,12 +13,13 @@ let All_Check_Box = document.querySelectorAll('input[type=checkbox]');
 
 let Password = "";
 let Pass_Length = 10;
+Change_Password_Length_Slider();
 
-function Copy_To_Clipboard()
+async function Copy_To_Clipboard()
 {
     try
     {
-        navigator.clipboard.writeText(Password_Display.value);
+        await navigator.clipboard.writeText(Password_Display.value);
         Password_Copy_Message.innerText = "Copied!";
     }
     catch
@@ -34,12 +35,11 @@ function Copy_To_Clipboard()
     }, 2000);
 }
 
-// function Change_Password_Length_Slider()
-// {
-//     Password_length_Number.innerText = Pass_Length;
-//     Password_length_Slider.value = Pass_Length;
-// }
-// Change_Password_Length_Slider();
+function Change_Password_Length_Slider()
+{
+    Password_length_Number.innerText = Pass_Length;
+    Password_length_Slider.value = Pass_Length;
+}
 
 Password_length_Slider.addEventListener('input', (Event) =>
 {
@@ -126,3 +126,11 @@ function Calculate_Password_Strength()
         Strength_Indicator.classList.add(Blue);
     }
 }
+
+Password_Copy.addEventListener('click', () =>
+{
+    if(Password_Display.value)
+    {
+        Copy_To_Clipboard();
+    }
+})
