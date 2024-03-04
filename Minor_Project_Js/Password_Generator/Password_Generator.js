@@ -20,3 +20,29 @@ function Change_Password_Length_Slider()
     Password_length_Number.innerText = Pass_Length;
     Password_length_Slider.value = Pass_Length;
 }
+
+function Generate_Random_Number(Min, Max)
+{
+    return Math.floor(Math.random() * (Max - Min) + Min);
+}
+
+function Generate_Random_Integer()
+{
+    return Generate_Random_Number(0, 9);
+}
+
+function Generate_Random_Char()
+{
+    let Flag = Generate_Random_Number(0, 2);
+    if(Flag == 1)
+    {
+        return String.fromCharCode(Generate_Random_Number(97, 97 + 26));
+    }
+    return String.fromCharCode(Generate_Random_Number(65, 65 + 26));
+}
+
+function Generate_Random_Symbols()
+{
+    let Symbols = "~`!@#$%^&*()_+-={}|][';:.,<>";
+    return Symbols[Generate_Random_Number(0, Symbols.length)];
+}
