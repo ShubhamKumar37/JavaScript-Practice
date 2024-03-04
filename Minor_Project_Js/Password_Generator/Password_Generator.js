@@ -10,10 +10,9 @@ let Symbol_Val = document.querySelector('#Symbol');
 let Strength_Indicator = document.querySelector('[Strength_Indicator]');
 let Generate_Password = document.querySelector('[Generate_Password]');
 let All_Check_Box = document.querySelectorAll('input[type=checkbox]');
-
+let Checked_Boxes = 0;
 let Password = "";
 let Pass_Length = 10;
-Change_Password_Length_Slider();
 
 async function Copy_To_Clipboard()
 {
@@ -45,6 +44,7 @@ Password_length_Slider.addEventListener('input', (Event) =>
 {
     Password_length_Number.innerText = Event.target.value;
     Pass_Length = Password_length_Slider.value;
+    Change_Password_Length_Slider();
 })
 
 function Generate_Random_Number(Min, Max)
@@ -75,7 +75,6 @@ function Generate_Random_Symbols()
 
 function Calculate_Password_Strength()
 {
-    let Temp = 0;
     let Length = Pass_Length;
     let Green = "bg-[#20EA00]";
     let Blue = "bg-[#014AFF]";
@@ -85,10 +84,10 @@ function Calculate_Password_Strength()
     let Int = false;
     let Symbol = false;
 
-    if(Uppercase_Val.checked) {Upper = true; Temp++;}
-    if(Lowercase_Val.checked) {Lower = true; Temp++;}
-    if(Number_Val.checked) {Int = true; Temp++;}
-    if(Symbol_Val.checked) {Symbol = true; Temp++;}
+    if(Uppercase_Val.checked) {Upper = true; Checked_Boxes++;}
+    if(Lowercase_Val.checked) {Lower = true; Checked_Boxes++;}
+    if(Number_Val.checked) {Int = true; Checked_Boxes++;}
+    if(Symbol_Val.checked) {Symbol = true; Checked_Boxes++;}
 
 
     if(Length <= 7)
@@ -97,7 +96,7 @@ function Calculate_Password_Strength()
         {
             Strength_Indicator.classList.add(Blue);
         }
-        else if(Temp > 1)
+        else if(Checked_Boxes > 1)
         {
             Strength_Indicator.classList.add(Green);
         }
@@ -112,7 +111,7 @@ function Calculate_Password_Strength()
         {
             Strength_Indicator.classList.add(Blue);
         }
-        else if(Temp > 1)
+        else if(Checked_Boxes > 1)
         {
             Strength_Indicator.classList.add(Green);
         }
@@ -133,4 +132,5 @@ Password_Copy.addEventListener('click', () =>
     {
         Copy_To_Clipboard();
     }
-})
+});
+
