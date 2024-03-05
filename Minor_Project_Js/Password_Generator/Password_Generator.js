@@ -84,10 +84,10 @@ function Calculate_Password_Strength()
     let Int = false;
     let Symbol = false;
 
-    if(Uppercase_Val.checked) {Upper = true; Checked_Boxes++;}
-    if(Lowercase_Val.checked) {Lower = true; Checked_Boxes++;}
-    if(Number_Val.checked) {Int = true; Checked_Boxes++;}
-    if(Symbol_Val.checked) {Symbol = true; Checked_Boxes++;}
+    if(Uppercase_Val.checked) {Upper = true;}
+    if(Lowercase_Val.checked) {Lower = true;}
+    if(Number_Val.checked) {Int = true;}
+    if(Symbol_Val.checked) {Symbol = true;}
 
 
     if(Length <= 7)
@@ -134,3 +134,21 @@ Password_Copy.addEventListener('click', () =>
     }
 });
 
+function Check_All_box()
+{
+    Checked_Boxes = 0;
+    All_Check_Box.forEach((Box) =>
+    {
+        if(Box.checked)
+        {
+            Checked_Boxes++;
+        }
+    })
+
+    console.log("Checked");
+}
+
+All_Check_Box.forEach((Box) => 
+{
+    Box.addEventListener('change', Check_All_box());
+})
